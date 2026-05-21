@@ -1,53 +1,193 @@
-# BoardgameListingWebApp
+# Enterprise-Grade DevSecOps CI/CD Pipeline on Kubernetes
 
-## Description 
+![Pipeline Status](https://img.shields.io/badge/Pipeline-Passing-brightgreen)
+![Security Scan](https://img.shields.io/badge/Security-Trivy-blue)
+![Kubernetes](https://img.shields.io/badge/Orchestration-Kubernetes-326CE5)
+![AWS](https://img.shields.io/badge/Cloud-AWS-FF9900)
 
-**Board Game Database Full-Stack Web Application.**
-This web application displays lists of board games and their reviews. While anyone can view the board game lists and reviews, they are required to log in to add/ edit the board games and their reviews. The 'users' have the authority to add board games to the list and add reviews, and the 'managers' have the authority to edit/ delete the reviews on top of the authorities of users.  
+---
 
-## Technologies
+## About the Project
 
-- Java
-- Spring Boot
-- Amazon Web Services(AWS) EC2
-- Thymeleaf
-- Thymeleaf Fragments
-- HTML5
-- CSS
-- JavaScript
-- Spring MVC
-- JDBC
-- H2 Database Engine (In-memory)
-- JUnit test framework
-- Spring Security
-- Twitter Bootstrap
-- Maven
+Built a production-grade end-to-end CI/CD pipeline that automates the entire software delivery lifecycle — from code commit to Kubernetes deployment — with integrated security scanning, quality gates, artifact management, and real-time monitoring.
 
-## Features
+---
 
-- Full-Stack Application
-- UI components created with Thymeleaf and styled with Twitter Bootstrap
-- Authentication and authorization using Spring Security
-  - Authentication by allowing the users to authenticate with a username and password
-  - Authorization by granting different permissions based on the roles (non-members, users, and managers)
-- Different roles (non-members, users, and managers) with varying levels of permissions
-  - Non-members only can see the boardgame lists and reviews
-  - Users can add board games and write reviews
-  - Managers can edit and delete the reviews
-- Deployed the application on AWS EC2
-- JUnit test framework for unit testing
-- Spring MVC best practices to segregate views, controllers, and database packages
-- JDBC for database connectivity and interaction
-- CRUD (Create, Read, Update, Delete) operations for managing data in the database
-- Schema.sql file to customize the schema and input initial data
-- Thymeleaf Fragments to reduce redundancy of repeating HTML elements (head, footer, navigation)
+## Architecture Overview
+
+```
+Developer Pushes Code
+        ↓
+    GitHub Repo
+        ↓
+    Jenkins (CI/CD Orchestrator)
+        ↓
+┌─────────────────────────────────┐
+│         Pipeline Stages          │
+│  Compile → Test → Scan →        │
+│  Quality Gate → Build →         │
+│  Dockerize → Push → Deploy      │
+└─────────────────────────────────┘
+        ↓
+  Kubernetes Cluster
+        ↓
+  Deployed Application
+        ↓
+  Prometheus + Grafana (Monitoring)
+        ↓
+  Email Notification (Success/Failure)
+```
+
+---
+
+## Tools & Technologies
+
+| Category | Tools |
+|---|---|
+| Version Control | GitHub |
+| CI/CD | Jenkins, Maven |
+| Code Quality | SonarQube |
+| Security Scanning | Trivy |
+| Artifact Management | Nexus Repository |
+| Containerization | Docker |
+| Container Orchestration | Kubernetes |
+| Monitoring | Prometheus, Grafana |
+| Notification | Email (SMTP) |
+| Cloud | AWS EC2 |
+| OS | Ubuntu Linux |
+
+---
+
+## Pipeline Stages
+
+| Stage | Tool | Purpose |
+|---|---|---|
+| 1. Tool Install | Jenkins | Install JDK17 and Maven |
+| 2. Git Checkout | GitHub | Pull latest source code |
+| 3. Compile | Maven | Compile source code |
+| 4. Test | Maven | Run unit test cases |
+| 5. File System Scan | Trivy | Scan filesystem for vulnerabilities |
+| 6. SonarQube Analysis | SonarQube | Code quality and coverage analysis |
+| 7. Quality Gate | SonarQube | Fail pipeline if quality standards not met |
+| 8. Build | Maven | Package application as JAR |
+| 9. Publish to Nexus | Nexus | Store versioned build artifact |
+| 10. Build Docker Image | Docker | Containerize the application |
+| 11. Image Scan | Trivy | Scan Docker image for vulnerabilities |
+| 12. Push Docker Image | Docker Hub | Push image to container registry |
+| 13. Deploy to Kubernetes | kubectl | Deploy containerized app to K8s cluster |
+| 14. Verify Deployment | kubectl | Confirm pods and services are running |
+| 15. Send Email | SMTP | Notify team with build status + Trivy report |
+
+---
+
+## Infrastructure Setup
+
+### AWS EC2 Instances
+- **Jenkins Server** — CI/CD orchestration
+- **SonarQube Server** — Code quality analysis (Docker container)
+- **Nexus Server** — Artifact repository (Docker container)
+
+### Kubernetes Cluster
+- Set up using **kubeadm**
+- 1 Master Node + 1 Worker Node
+- Networking via **Calico CNI**
+- Ingress via **NGINX Ingress Controller**
+
+---
+
+## Screenshots
+
+### Jenkins Pipeline — All Stages Passing ✅
+![Jenkins Pipeline](screenshots/jenkins-pipeline-stages.png)
+
+### Jenkins Build Status — Build #29 Success ✅
+![Jenkins Build](screenshots/jenkins-build-status.png)
+
+### Deployed Application Running on Kubernetes ✅
+![Deployed App](screenshots/deployed-application.png)
+
+### Kubernetes Pods Running ✅
+![K8s Pods](screenshots/kubernetes-pods.png)
+
+### Email Notification with Trivy Report Attached ✅
+![Email Notification](screenshots/email-notification.png)
+
+### Trivy Security Scan Report ✅
+![Trivy Report](screenshots/trivy-scan-report.png)
+
+---
+
+## Security Scanning Results
+
+### Docker Image Scan Summary
+| Target | Type | Total | Critical | High | Medium | Low |
+|---|---|---|---|---|---|---|
+| Alpine 3.23.3 (base image) | OS | 10 | 0 | 5 | 5 | 0 |
+| app.jar (Java dependencies) | JAR | 91 | 13 | 38 | 32 | 8 |
+
+> **Note:** Vulnerabilities detected are in open-source dependencies of the application. In a production environment, these would be flagged to the development team to upgrade affected libraries to their fixed versions. All vulnerabilities have available fixes as identified by Trivy.
+
+---
+
+## Key Highlights
+
+- ✅ **Multiple successful builds** — Pipeline ran 29+ times with consistent results
+- ✅ **Real production scale** — Deployed and verified on live Kubernetes cluster
+- ✅ **DevSecOps integrated** — Security scanning at both filesystem and image level
+- ✅ **Full automation** — Zero manual intervention from commit to deployment
+- ✅ **Observability** — Monitoring via Prometheus and Grafana
+- ✅ **Notifications** — Automated email with build status and security reports
+
+---
 
 ## How to Run
 
-1. Clone the repository
-2. Open the project in your IDE of choice
-3. Run the application
-4. To use initial user data, use the following credentials.
-  - username: bugs    |     password: bunny (user role)
-  - username: daffy   |     password: duck  (manager role)
-5. You can also sign-up as a new user and customize your role to play with the application! 😊
+### Prerequisites
+- AWS Account
+- EC2 instances (t2.medium or higher)
+- Docker installed
+- kubectl configured
+
+### Steps
+```bash
+# 1. Clone the repository
+git clone https://github.com/nithyashreek301-max/Boardgame.git
+
+# 2. Set up Jenkins and install required plugins
+# (Eclipse Temurin, Pipeline Maven, SonarQube Scanner,
+#  Docker, Kubernetes CLI, Config File Provider)
+
+# 3. Configure credentials in Jenkins
+# - GitHub token
+# - SonarQube token
+# - Docker Hub credentials
+# - Kubernetes config
+
+# 4. Create and run the pipeline
+# - Create new Jenkins Pipeline job
+# - Point to Jenkinsfile in repo
+# - Build Now
+
+# 5. Verify deployment
+kubectl get pods -n webapps
+kubectl get svc -n webapps
+```
+
+---
+
+## Key Learnings
+
+- Understood how **quality gates** prevent bad code from reaching production
+- Learned how **Trivy** catches vulnerabilities at both filesystem and container image level
+- Implemented **end-to-end automation** reducing manual deployment effort to zero
+- Configured **Prometheus and Grafana** for real-time application monitoring
+- Understood **artifact versioning** in Nexus to prevent deployment of untested builds
+- Gained hands-on experience with **Kubernetes** pod management and service exposure
+
+---
+
+## Author
+
+**Nithyashree K**
+- LinkedIn: [linkedin.com/in/nithya30](https://linkedin.com/in/nithya30)
+- GitHub: [github.com/nithyashreek301-max](https://github.com/nithyashreek301-max)
