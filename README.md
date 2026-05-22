@@ -98,30 +98,23 @@ Developer Pushes Code
 ## Screenshots
 
 ### Jenkins Pipeline — All Stages Passing ✅
-![Jenkins Pipeline](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/Jenkins_pipeline.png)
+![Jenkins Pipeline](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/screenshots/Jenkins_pipeline.png)
 
 ### Jenkins Build Status — Build #29 Success ✅
-![Jenkins Build](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/jenkins_build.png)
+![Jenkins Build](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/screenshots/jenkins_build.png)
 
 ### SonarQube Code Quality Analysis ✅
-![SonarQube](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/Sonar_Qube.png)
+![SonarQube](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/screenshots/Sonar_Qube.png)
 
 ### Kubernetes Pods Running ✅
-![K8s Pods](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/Kubernetes_pod.png)
+![K8s Pods](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/screenshots/Kubernetes_pod.png)
 
 ### Email Notification with Trivy Report Attached ✅
-![Email Notification](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/Mail_notification.png)
+![Email Notification](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/screenshots/Mail_notification.png)
 
 ### Trivy Security Scan Report ✅
 > Full Trivy scan report is attached via email notification 
 > after each pipeline run. See Email Notification screenshot above.
-
-
-
-
-
-
-
 ---
 
 ## Security Scanning Results
