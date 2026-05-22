@@ -107,7 +107,7 @@ Developer Pushes Code
 ![Deployed App](screenshots/deployed-application.png)
 
 ### Kubernetes Pods Running ✅
-![K8s Pods](screenshots/kubernetes-pods.png)
+![K8s Pods](https://github.com/nithyashreek301-max/Boardgame/blob/965458cb6cbc8ea5f1852dafc09e449d3da391af/Kubernetes_pod.png)
 
 ### Email Notification with Trivy Report Attached ✅
 ![Email Notification](screenshots/email-notification.png)
