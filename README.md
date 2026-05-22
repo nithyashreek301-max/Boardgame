@@ -103,9 +103,6 @@ Developer Pushes Code
 ### Jenkins Build Status — Build #29 Success ✅
 ![Jenkins Build](https://github.com/nithyashreek301-max/Boardgame/blob/916de62e18d3dbd04cbba5fd05252d8e20ede5d0/jenkins_build.png)
 
-### Deployed Application Running on Kubernetes ✅
-![Deployed App](screenshots/deployed-application.png)
-
 ### Kubernetes Pods Running ✅
 ![K8s Pods](https://github.com/nithyashreek301-max/Boardgame/blob/965458cb6cbc8ea5f1852dafc09e449d3da391af/Kubernetes_pod.png)
 
@@ -113,7 +110,7 @@ Developer Pushes Code
 ![Email Notification](https://github.com/nithyashreek301-max/Boardgame/blob/916de62e18d3dbd04cbba5fd05252d8e20ede5d0/Mail_notification.png)
 
 ### Trivy Security Scan Report ✅
-![Trivy Report](screenshots/trivy-scan-report.png)
+![Trivy Report](https://github.com/nithyashreek301-max/Boardgame/blob/81ce35e51b39719fe90a31864643591c2a4a8509/trivy-scan-image.html)
 
 ### SonarQube Code Quality Analysis ✅
 ![SonarQube](https://github.com/nithyashreek301-max/Boardgame/blob/916de62e18d3dbd04cbba5fd05252d8e20ede5d0/Sonar_Qube.png)
