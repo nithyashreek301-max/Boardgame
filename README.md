@@ -103,14 +103,22 @@ Developer Pushes Code
 ### Jenkins Build Status — Build #29 Success ✅
 ![Jenkins Build](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/jenkins_build.png)
 
+### SonarQube Code Quality Analysis ✅
+![SonarQube](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/Sonar_Qube.png)
+
 ### Kubernetes Pods Running ✅
 ![K8s Pods](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/Kubernetes_pod.png)
 
 ### Email Notification with Trivy Report Attached ✅
 ![Email Notification](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/Mail_notification.png)
 
-### SonarQube Code Quality Analysis ✅
-![SonarQube](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/Sonar_Qube.png)
+### Trivy Security Scan Report ✅
+> Full Trivy scan report is attached via email notification 
+> after each pipeline run. See Email Notification screenshot above.
+
+
+
+
 
 
 
