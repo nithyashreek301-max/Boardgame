@@ -98,22 +98,19 @@ Developer Pushes Code
 ## Screenshots
 
 ### Jenkins Pipeline — All Stages Passing ✅
-![Jenkins Pipeline](https://github.com/nithyashreek301-max/Boardgame/blob/916de62e18d3dbd04cbba5fd05252d8e20ede5d0/Jenkins_pipeline.png)
+![Jenkins Pipeline](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/Jenkins_pipeline.png)
 
 ### Jenkins Build Status — Build #29 Success ✅
-![Jenkins Build](https://github.com/nithyashreek301-max/Boardgame/blob/916de62e18d3dbd04cbba5fd05252d8e20ede5d0/jenkins_build.png)
+![Jenkins Build](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/jenkins_build.png)
 
 ### Kubernetes Pods Running ✅
-![K8s Pods](https://github.com/nithyashreek301-max/Boardgame/blob/965458cb6cbc8ea5f1852dafc09e449d3da391af/Kubernetes_pod.png)
+![K8s Pods](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/Kubernetes_pod.png)
 
 ### Email Notification with Trivy Report Attached ✅
-![Email Notification](https://github.com/nithyashreek301-max/Boardgame/blob/916de62e18d3dbd04cbba5fd05252d8e20ede5d0/Mail_notification.png)
-
-### Trivy Security Scan Report ✅
-![Trivy Report](https://github.com/nithyashreek301-max/Boardgame/blob/81ce35e51b39719fe90a31864643591c2a4a8509/trivy-scan-image.html)
+![Email Notification](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/Mail_notification.png)
 
 ### SonarQube Code Quality Analysis ✅
-![SonarQube](https://github.com/nithyashreek301-max/Boardgame/blob/916de62e18d3dbd04cbba5fd05252d8e20ede5d0/Sonar_Qube.png)
+![SonarQube](https://raw.githubusercontent.com/nithyashreek301-max/Boardgame/master/Sonar_Qube.png)
 
 
 
