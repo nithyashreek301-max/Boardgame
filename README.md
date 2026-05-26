@@ -82,16 +82,16 @@ Developer Pushes Code
 
 ## Infrastructure Setup
 
-### AWS EC2 Instances
-- **Jenkins Server** — CI/CD orchestration
-- **SonarQube Server** — Code quality analysis (Docker container)
-- **Nexus Server** — Artifact repository (Docker container)
+### Local DevOps Environment
+- Jenkins configured locally for CI/CD pipeline orchestration
+- SonarQube deployed as a Docker container for static code quality analysis
+- Nexus Repository Manager deployed as a Docker container for artifact storage and version management
 
 ### Kubernetes Cluster
-- Set up using **kubeadm**
-- 1 Master Node + 1 Worker Node
-- Networking via **Calico CNI**
-- Ingress via **NGINX Ingress Controller**
+- Local Kubernetes cluster created using Kind (Kubernetes in Docker)
+- Used for container orchestration and application deployment testing
+- Networking handled through default Kind networking with Kubernetes services
+- Ingress configured using NGINX Ingress Controller for external application access
 
 ---
 
