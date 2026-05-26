@@ -143,10 +143,11 @@ Developer Pushes Code
 ## How to Run
 
 ### Prerequisites
-- AWS Account
-- EC2 instances (t2.medium or higher)
-- Docker installed
-- kubectl configured
+- Local machine or VM with Docker installed
+- Kind (Kubernetes in Docker) installed
+- kubectl configured for cluster access
+- Sufficient system resources (minimum 8 GB RAM recommended)
+- Internet connectivity for pulling Docker images and dependencies
 
 ### Steps
 ```bash
