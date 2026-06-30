@@ -117,18 +117,6 @@ Developer Pushes Code
 > after each pipeline run. See Email Notification screenshot above.
 ---
 
-## Security Scanning Results
-
-### Docker Image Scan Summary
-| Target | Type | Total | Critical | High | Medium | Low |
-|---|---|---|---|---|---|---|
-| Alpine 3.23.3 (base image) | OS | 10 | 0 | 5 | 5 | 0 |
-| app.jar (Java dependencies) | JAR | 91 | 13 | 38 | 32 | 8 |
-
-> **Note:** Vulnerabilities detected are in open-source dependencies of the application. In a production environment, these would be flagged to the development team to upgrade affected libraries to their fixed versions. All vulnerabilities have available fixes as identified by Trivy.
-
----
-
 ## Key Highlights
 
 - ✅ **Multiple successful builds** — Pipeline ran 29+ times with consistent results
